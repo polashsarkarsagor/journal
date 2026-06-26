@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Applications of AI – ExploringAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="ml.html">ML Fundamentals</a>
+    <a href="algorithms.html">Algorithms</a>
+    <a href="applications.html" class="active">Applications</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"><span class="toggle-icon">◐</span></button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <span class="eyebrow">Real-World AI</span>
+  <h1>Applications of AI</h1>
+  <p>From your phone's camera to life-saving diagnostics — discover where AI is reshaping industries and daily life.</p>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Domains</span>
+      <h2>AI in the Real World</h2>
+      <p>These application areas represent the most impactful and widely deployed uses of AI and machine learning today.</p>
+    </div>
+    <div class="app-grid">
+
+      <div class="app-card">
+        <div class="app-banner" style="background:linear-gradient(135deg,rgba(0,212,255,0.1),rgba(0,212,255,0.05))">👁️</div>
+        <div class="app-content">
+          <h3>Computer Vision</h3>
+          <p>Teaching machines to interpret and understand visual information from images and video. CNNs learn hierarchical features — edges, shapes, objects — enabling systems to "see" with superhuman accuracy in specific tasks.</p>
+          <div class="app-examples">
+            <span class="app-ex">Face Recognition</span>
+            <span class="app-ex">Object Detection</span>
+            <span class="app-ex">Medical Imaging</span>
+            <span class="app-ex">Self-Driving Cars</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-banner" style="background:linear-gradient(135deg,rgba(124,108,255,0.1),rgba(124,108,255,0.05))">💬</div>
+        <div class="app-content">
+          <h3>Natural Language Processing</h3>
+          <p>Enabling computers to read, understand, and generate human language. Transformers like GPT and BERT learn rich contextual representations of text, powering everything from search engines to virtual assistants.</p>
+          <div class="app-examples">
+            <span class="app-ex">Machine Translation</span>
+            <span class="app-ex">Chatbots</span>
+            <span class="app-ex">Sentiment Analysis</span>
+            <span class="app-ex">Text Summarization</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-banner" style="background:linear-gradient(135deg,rgba(0,229,160,0.1),rgba(0,229,160,0.05))">🎯</div>
+        <div class="app-content">
+          <h3>Recommendation Systems</h3>
+          <p>Collaborative filtering and matrix factorization algorithms analyze user behavior and item relationships to suggest content you'll likely enjoy. The backbone of Netflix, Spotify, YouTube, and Amazon.</p>
+          <div class="app-examples">
+            <span class="app-ex">Movie Suggestions</span>
+            <span class="app-ex">Product Recommendations</span>
+            <span class="app-ex">Music Discovery</span>
+            <span class="app-ex">News Feeds</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-banner" style="background:linear-gradient(135deg,rgba(255,180,0,0.1),rgba(255,180,0,0.05))">🤖</div>
+        <div class="app-content">
+          <h3>Robotics</h3>
+          <p>AI allows robots to perceive their environment, plan actions, and learn from experience. Reinforcement learning trains robots to manipulate objects, navigate spaces, and handle unpredictable real-world scenarios.</p>
+          <div class="app-examples">
+            <span class="app-ex">Industrial Automation</span>
+            <span class="app-ex">Surgical Robots</span>
+            <span class="app-ex">Warehouse Bots</span>
+            <span class="app-ex">Exploration Drones</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-banner" style="background:linear-gradient(135deg,rgba(255,100,100,0.1),rgba(255,100,100,0.05))">🏥</div>
+        <div class="app-content">
+          <h3>Healthcare & Diagnostics</h3>
+          <p>AI models analyze medical images, genomic sequences, and patient records to assist diagnosis. Deep learning detects cancers in radiology scans with accuracy matching specialist physicians, and drug discovery is accelerated by protein structure prediction (e.g., AlphaFold).</p>
+          <div class="app-examples">
+            <span class="app-ex">Cancer Screening</span>
+            <span class="app-ex">Drug Discovery</span>
+            <span class="app-ex">Patient Risk Models</span>
+            <span class="app-ex">Protein Folding</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-banner" style="background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(124,108,255,0.08))">✨</div>
+        <div class="app-content">
+          <h3>Generative AI</h3>
+          <p>Diffusion models, GANs, and large language models can generate novel images, text, code, audio, and video from prompts. These models learn the statistical distribution of training data and sample new, plausible outputs from it — enabling creative co-pilots and content automation.</p>
+          <div class="app-examples">
+            <span class="app-ex">Image Generation</span>
+            <span class="app-ex">Code Generation</span>
+            <span class="app-ex">Video Synthesis</span>
+            <span class="app-ex">Music Composition</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Impact stats -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Scale & Impact</span>
+      <h2>AI by the Numbers</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--accent);line-height:1;">97%</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);margin-top:6px;text-transform:uppercase;letter-spacing:0.08em;font-family:var(--font-mono);">AI accuracy in certain cancer detections</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--accent-2);line-height:1;">35%</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);margin-top:6px;text-transform:uppercase;letter-spacing:0.08em;font-family:var(--font-mono);">of Amazon revenue from recommendations</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--green);line-height:1;">200M</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);margin-top:6px;text-transform:uppercase;letter-spacing:0.08em;font-family:var(--font-mono);">ChatGPT weekly active users</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px 24px;text-align:center;">
+        <div style="font-family:var(--font-display);font-size:2.2rem;font-weight:700;color:var(--accent);line-height:1;">$15T</div>
+        <div style="font-size:0.8rem;color:var(--text-muted);margin-top:6px;text-transform:uppercase;letter-spacing:0.08em;font-family:var(--font-mono);">AI's projected global economic impact by 2030</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+        <p>An informative web platform on Artificial Intelligence, Machine Learning, and Core Algorithms.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="ml.html">ML Fundamentals</a>
+        <a href="algorithms.html">Algorithms</a>
+        <a href="applications.html">Applications</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="glossary.html">Glossary</a>
+      </div>
+      <div class="footer-info">
+        <h4>Project Info</h4>
+        <p>Course: Web Programming Lab</p>
+        <p>Code: CSE061 3302</p>
+        <p>Section: 61-D · Summer 2026</p>
+        <p>Uttara University, CSE Dept.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ExploringAI — Uttara University · Section 61-D · Submitted to Jebun Nahar Juthy</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

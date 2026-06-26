@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glossary – ExploringAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="ml.html">ML Fundamentals</a>
+    <a href="algorithms.html">Algorithms</a>
+    <a href="applications.html">Applications</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="glossary.html" class="active">Glossary</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"><span class="toggle-icon">◐</span></button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <span class="eyebrow">A–Z Reference</span>
+  <h1>Glossary of AI & ML Terms</h1>
+  <p>Quick definitions for the most important concepts in artificial intelligence and machine learning.</p>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="glossary-search-wrap">
+      <input
+        type="text"
+        id="glossarySearch"
+        class="glossary-search"
+        placeholder="Search terms..."
+        autocomplete="off"
+      />
+      <span class="search-icon">🔍</span>
+    </div>
+    <p id="glossaryNoResult" style="text-align:center;color:var(--text-muted);display:none;padding:32px 0;">No terms match your search. Try different keywords.</p>
+    <div class="glossary-list" id="glossaryList">
+
+      <div class="glos-item">
+        <h4>Activation Function</h4>
+        <p>A non-linear function applied to a neuron's output, enabling neural networks to learn complex patterns. Examples: ReLU, sigmoid, tanh.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Algorithm</h4>
+        <p>A step-by-step procedure for solving a problem or achieving a goal. In ML, algorithms learn patterns from data to make predictions or decisions.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Artificial Neural Network (ANN)</h4>
+        <p>A computational model inspired by biological neural networks, consisting of interconnected layers of nodes that process information through weighted connections.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Backpropagation</h4>
+        <p>The algorithm used to train neural networks by computing gradients of the loss function with respect to each weight and updating weights via gradient descent.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Bagging</h4>
+        <p>Bootstrap Aggregating — an ensemble technique that trains multiple models on random subsets of training data and aggregates their predictions. Used in Random Forests.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Bias (Model)</h4>
+        <p>Error from oversimplified assumptions in a model. High bias leads to underfitting — the model fails to capture true patterns in the data.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Batch Size</h4>
+        <p>The number of training samples processed before the model's weights are updated. Larger batches are more stable; smaller batches introduce useful noise.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Classification</h4>
+        <p>A supervised learning task where the model predicts which discrete category an input belongs to. Examples: spam/not spam, cat/dog, disease/no disease.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Clustering</h4>
+        <p>An unsupervised learning task that groups similar data points together. Unlike classification, clusters are not predefined — the algorithm discovers them from data structure.</p>
+      </div>
+      <div class="glos-item">
+        <h4>CNN (Convolutional Neural Network)</h4>
+        <p>A deep learning architecture designed for grid-like data (images). Uses convolutional layers to learn spatial hierarchies of features: edges → textures → objects.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Cross-Validation</h4>
+        <p>A technique for evaluating model generalization by splitting data into multiple train/test folds and averaging performance metrics across all folds.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Decision Tree</h4>
+        <p>A tree-structured model that makes predictions by splitting data based on feature conditions. Each internal node is a decision; each leaf is a prediction.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Deep Learning</h4>
+        <p>A subset of machine learning using neural networks with many hidden layers. Deep networks can learn hierarchical representations from raw data like images and text.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Dimensionality Reduction</h4>
+        <p>Techniques that reduce the number of features while preserving important structure. Examples: PCA (Principal Component Analysis), t-SNE, UMAP.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Dropout</h4>
+        <p>A regularization technique that randomly disables neurons during training to prevent overfitting and improve generalization in neural networks.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Embedding</h4>
+        <p>A learned representation of data (words, items, users) as dense vectors in a continuous space where semantic similarity corresponds to geometric closeness.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Epoch</h4>
+        <p>One complete pass through the full training dataset. Models typically train for many epochs, progressively minimizing the loss function with each pass.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Feature</h4>
+        <p>An individual measurable property used as input to a model. Feature engineering — selecting and transforming features — is critical to model performance.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Feature Engineering</h4>
+        <p>The process of selecting, transforming, or creating new input variables to improve a model's predictive power. Often the most impactful step in the ML pipeline.</p>
+      </div>
+      <div class="glos-item">
+        <h4>GAN (Generative Adversarial Network)</h4>
+        <p>Two neural networks — a generator and discriminator — trained adversarially. The generator creates fake data; the discriminator distinguishes real from fake. Both improve over time.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Gradient Descent</h4>
+        <p>An optimization algorithm that iteratively adjusts model parameters in the direction that minimizes the loss function, analogous to rolling downhill to find a valley.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Hyperparameter</h4>
+        <p>A configuration external to the model that is set before training and not learned from data. Examples: learning rate, number of layers, K in K-Means.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Inference</h4>
+        <p>Using a trained model to make predictions on new data. Distinct from training — inference uses the fixed learned parameters to produce outputs for unseen inputs.</p>
+      </div>
+      <div class="glos-item">
+        <h4>K-Nearest Neighbors (KNN)</h4>
+        <p>A lazy learning algorithm that classifies new points based on the majority label of their K closest training examples, measured by a distance metric.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Label</h4>
+        <p>The target output value in supervised learning. During training, labels are provided. The model learns to predict them from input features for unseen examples.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Learning Rate</h4>
+        <p>A hyperparameter controlling how much model weights are adjusted per gradient descent step. Too high: training is unstable. Too low: training is slow.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Linear Regression</h4>
+        <p>A supervised algorithm modeling the linear relationship between input features and a continuous output. Finds coefficients that minimize sum of squared residuals.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Logistic Regression</h4>
+        <p>A classification algorithm using the sigmoid function to output probabilities for binary or multiclass outcomes. Despite its name, it is a classifier, not a regressor.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Loss Function</h4>
+        <p>A mathematical measure of the difference between model predictions and actual values. Training minimizes this function. Examples: MSE for regression, cross-entropy for classification.</p>
+      </div>
+      <div class="glos-item">
+        <h4>LSTM (Long Short-Term Memory)</h4>
+        <p>A type of recurrent neural network with gates that control information flow, enabling it to learn long-range dependencies in sequential data like text and time series.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Model</h4>
+        <p>A mathematical function learned from data that maps inputs to outputs. Models are defined by their architecture (structure) and parameters (learned values).</p>
+      </div>
+      <div class="glos-item">
+        <h4>Normalization</h4>
+        <p>Scaling input features to a standard range (e.g., [0,1] or zero mean). Helps gradient descent converge faster and prevents features with large values from dominating.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Overfitting</h4>
+        <p>When a model performs very well on training data but poorly on test data, having learned noise and specific training examples rather than general patterns.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Precision & Recall</h4>
+        <p>Precision: fraction of positive predictions that are correct. Recall: fraction of actual positives correctly identified. Both matter in imbalanced classification problems.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Random Forest</h4>
+        <p>An ensemble of decision trees trained on random data subsets and feature subsets. Predictions are aggregated to reduce variance and improve generalization.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Regularization</h4>
+        <p>Techniques that penalize model complexity to prevent overfitting. L1 regularization (Lasso) promotes sparsity; L2 (Ridge) penalizes large weights.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Reinforcement Learning</h4>
+        <p>An ML paradigm where an agent learns by taking actions in an environment, receiving reward signals, and updating a policy to maximize cumulative reward.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Regression</h4>
+        <p>A supervised learning task predicting a continuous numerical value. Examples: predicting house prices, temperature, stock values.</p>
+      </div>
+      <div class="glos-item">
+        <h4>ReLU (Rectified Linear Unit)</h4>
+        <p>Activation function defined as f(x) = max(0, x). Simple, computationally efficient, and widely used in deep learning. Avoids the vanishing gradient problem.</p>
+      </div>
+      <div class="glos-item">
+        <h4>RNN (Recurrent Neural Network)</h4>
+        <p>A neural network with connections that form cycles, allowing information to persist across time steps. Suited for sequential data like text, speech, and time series.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Support Vector Machine (SVM)</h4>
+        <p>A classifier finding the maximum-margin hyperplane separating two classes. Uses kernel tricks for non-linearly separable data. Strong theoretical guarantees.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Supervised Learning</h4>
+        <p>An ML paradigm where the model learns from labeled training data — input-output pairs — to predict outputs for new unseen inputs.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Training Data</h4>
+        <p>The dataset used to fit model parameters. Its size and quality directly determine how well a model generalizes to new, unseen examples.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Transformer</h4>
+        <p>An architecture using self-attention mechanisms to process sequences in parallel. The foundation of modern large language models (BERT, GPT, LLaMA).</p>
+      </div>
+      <div class="glos-item">
+        <h4>Underfitting</h4>
+        <p>When a model is too simple to capture underlying data patterns. Both training and test performance are poor. Caused by too few features, parameters, or training time.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Unsupervised Learning</h4>
+        <p>An ML paradigm where the model learns from unlabeled data, discovering hidden patterns, structures, and groupings without predefined answers.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Variance (Model)</h4>
+        <p>Error from a model's sensitivity to fluctuations in training data. High variance causes overfitting — the model learns noise and doesn't generalize.</p>
+      </div>
+      <div class="glos-item">
+        <h4>Weight</h4>
+        <p>Learnable parameters in a model (especially neural networks) that are adjusted during training. Weights determine how much influence each input has on the output.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+        <p>An informative web platform on Artificial Intelligence, Machine Learning, and Core Algorithms.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="ml.html">ML Fundamentals</a>
+        <a href="algorithms.html">Algorithms</a>
+        <a href="applications.html">Applications</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="glossary.html">Glossary</a>
+      </div>
+      <div class="footer-info">
+        <h4>Project Info</h4>
+        <p>Course: Web Programming Lab</p>
+        <p>Code: CSE061 3302</p>
+        <p>Section: 61-D · Summer 2026</p>
+        <p>Uttara University, CSE Dept.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ExploringAI — Uttara University · Section 61-D · Submitted to Jebun Nahar Juthy</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

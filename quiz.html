@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz & Flashcards – ExploringAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="ml.html">ML Fundamentals</a>
+    <a href="algorithms.html">Algorithms</a>
+    <a href="applications.html">Applications</a>
+    <a href="quiz.html" class="active">Quiz</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"><span class="toggle-icon">◐</span></button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <span class="eyebrow">Test Yourself</span>
+  <h1>Quiz & Flashcards</h1>
+  <p>Challenge your AI/ML knowledge with 8 questions, then reinforce key terms with interactive flashcards.</p>
+</header>
+
+<!-- QUIZ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">8 Questions</span>
+      <h2>Knowledge Check</h2>
+      <p>Select the best answer for each question. You'll get an explanation after each choice.</p>
+    </div>
+    <div class="quiz-wrap">
+      <div id="quizContainer"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLASHCARDS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Flashcards</span>
+      <h2>Key Concepts</h2>
+      <p>Hover or tap any card to flip it and reveal the definition.</p>
+    </div>
+    <div class="flashcard-grid">
+
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="fc-front">
+            <div class="fc-term">Algorithm</div>
+            <h4>Supervised Learning</h4>
+            <div class="fc-hint">Hover to flip →</div>
+          </div>
+          <div class="fc-back">
+            <div class="fc-term">Definition</div>
+            <p>A learning paradigm where a model trains on labeled data — pairs of inputs and known correct outputs — to learn a prediction function.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="fc-front">
+            <div class="fc-term">Concept</div>
+            <h4>Overfitting</h4>
+            <div class="fc-hint">Hover to flip →</div>
+          </div>
+          <div class="fc-back">
+            <div class="fc-term">Definition</div>
+            <p>When a model learns training data too well — including noise — so it performs poorly on new, unseen data. High training accuracy, low test accuracy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="fc-front">
+            <div class="fc-term">Algorithm</div>
+            <h4>K-Means</h4>
+            <div class="fc-hint">Hover to flip →</div>
+          </div>
+          <div class="fc-back">
+            <div class="fc-term">Definition</div>
+            <p>An unsupervised clustering algorithm that groups data into K clusters by iteratively assigning points to the nearest centroid and updating centroids.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="fc-front">
+            <div class="fc-term">Architecture</div>
+            <h4>Neural Network</h4>
+            <div class="fc-hint">Hover to flip →</div>
+          </div>
+          <div class="fc-back">
+            <div class="fc-term">Definition</div>
+            <p>A model with layers of interconnected nodes inspired by biological neurons. Each node applies a weighted sum and activation function to its inputs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="fc-front">
+            <div class="fc-term">Concept</div>
+            <h4>Gradient Descent</h4>
+            <div class="fc-hint">Hover to flip →</div>
+          </div>
+          <div class="fc-back">
+            <div class="fc-term">Definition</div>
+            <p>An optimization algorithm that adjusts model parameters in the direction of steepest loss decrease to minimize prediction error during training.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="fc-front">
+            <div class="fc-term">Algorithm</div>
+            <h4>SVM</h4>
+            <div class="fc-hint">Hover to flip →</div>
+          </div>
+          <div class="fc-back">
+            <div class="fc-term">Definition</div>
+            <p>Support Vector Machine — finds the hyperplane that maximizes the margin between two classes. The nearest training points to the hyperplane are "support vectors."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="fc-front">
+            <div class="fc-term">Paradigm</div>
+            <h4>Reinforcement Learning</h4>
+            <div class="fc-hint">Hover to flip →</div>
+          </div>
+          <div class="fc-back">
+            <div class="fc-term">Definition</div>
+            <p>A learning paradigm where an agent learns by interacting with an environment, receiving rewards or penalties for actions, and aiming to maximize long-term reward.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="fc-front">
+            <div class="fc-term">Concept</div>
+            <h4>Bias–Variance Tradeoff</h4>
+            <div class="fc-hint">Hover to flip →</div>
+          </div>
+          <div class="fc-back">
+            <div class="fc-term">Definition</div>
+            <p>Bias is error from oversimplified models (underfitting). Variance is error from over-complex models (overfitting). Good ML models balance both for optimal generalization.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flashcard">
+        <div class="flashcard-inner">
+          <div class="fc-front">
+            <div class="fc-term">Method</div>
+            <h4>Backpropagation</h4>
+            <div class="fc-hint">Hover to flip →</div>
+          </div>
+          <div class="fc-back">
+            <div class="fc-term">Definition</div>
+            <p>Algorithm for training neural networks: computes the gradient of the loss with respect to each weight by propagating errors backwards through the network.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+        <p>An informative web platform on Artificial Intelligence, Machine Learning, and Core Algorithms.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="ml.html">ML Fundamentals</a>
+        <a href="algorithms.html">Algorithms</a>
+        <a href="applications.html">Applications</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="glossary.html">Glossary</a>
+      </div>
+      <div class="footer-info">
+        <h4>Project Info</h4>
+        <p>Course: Web Programming Lab</p>
+        <p>Code: CSE061 3302</p>
+        <p>Section: 61-D · Summer 2026</p>
+        <p>Uttara University, CSE Dept.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ExploringAI — Uttara University · Section 61-D · Submitted to Jebun Nahar Juthy</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

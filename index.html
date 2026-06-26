@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExploringAI – Artificial Intelligence & Machine Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html" class="active">Home</a>
+    <a href="ml.html">ML Fundamentals</a>
+    <a href="algorithms.html">Algorithms</a>
+    <a href="applications.html">Applications</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+      <span class="toggle-icon">◐</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <span class="hero-eyebrow">Uttara University · CSE061 3302</span>
+      <h1 class="hero-title">What is <br/><em>Artificial</em><br/>Intelligence?</h1>
+      <p class="hero-sub">A structured, visual guide to AI, Machine Learning, and the algorithms reshaping our world — built for curious minds, not just experts.</p>
+      <div class="hero-cta">
+        <a href="ml.html" class="btn btn-primary">Start Learning</a>
+        <a href="quiz.html" class="btn btn-ghost">Take a Quiz →</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <canvas id="neuralCanvas" width="480" height="480"></canvas>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Core Algorithms</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-num">3</span><span class="stat-label">ML Paradigms</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Glossary Terms</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Curiosity Required</span></div>
+  </div>
+</header>
+
+<!-- WHAT IS AI -->
+<section class="section section-alt" id="what-is-ai">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Foundation</span>
+      <h2>What is Artificial Intelligence?</h2>
+      <p>AI is the simulation of human intelligence in machines — enabling computers to learn, reason, and solve problems.</p>
+    </div>
+    <div class="definition-grid">
+      <div class="def-card">
+        <div class="def-icon">🧠</div>
+        <h3>Narrow AI</h3>
+        <p>Designed for a single task. Examples: chess engines, spam filters, face recognition. Most AI today is Narrow AI.</p>
+        <span class="tag">ANI</span>
+      </div>
+      <div class="def-card">
+        <div class="def-icon">⚡</div>
+        <h3>General AI</h3>
+        <p>Hypothetical AI that can perform any intellectual task a human can. Flexible reasoning across all domains.</p>
+        <span class="tag">AGI</span>
+      </div>
+      <div class="def-card">
+        <div class="def-icon">🚀</div>
+        <h3>Super AI</h3>
+        <p>Theoretical AI surpassing human intelligence in every field — creativity, social skills, scientific reasoning.</p>
+        <span class="tag">ASI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section" id="timeline">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">History</span>
+      <h2>Milestones in AI</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">1950</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <strong>Turing Test</strong>
+          <p>Alan Turing proposes a test for machine intelligence in "Computing Machinery and Intelligence."</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1956</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <strong>The term "AI" is coined</strong>
+          <p>John McCarthy introduces "Artificial Intelligence" at the Dartmouth Conference.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1997</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <strong>Deep Blue beats Kasparov</strong>
+          <p>IBM's Deep Blue defeats world chess champion Garry Kasparov — a milestone for narrow AI.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2012</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <strong>Deep Learning Revolution</strong>
+          <p>AlexNet wins ImageNet, sparking the modern deep learning era with GPUs and big data.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2017</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <strong>Transformer Architecture</strong>
+          <p>"Attention Is All You Need" introduces transformers — the backbone of modern LLMs.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2022</div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <strong>Generative AI Era</strong>
+          <p>ChatGPT reaches 100M users in 2 months, bringing conversational AI to the mainstream.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMORY TYPES -->
+<section class="section section-alt" id="memory-types">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Classification</span>
+      <h2>Types of AI Systems</h2>
+    </div>
+    <div class="memory-grid">
+      <div class="memory-card">
+        <div class="mem-badge">Type 1</div>
+        <h3>Reactive Machines</h3>
+        <p>No memory. Responds only to current input. Example: IBM's Deep Blue responds to a chess board position but doesn't learn from past games.</p>
+      </div>
+      <div class="memory-card">
+        <div class="mem-badge">Type 2</div>
+        <h3>Limited Memory</h3>
+        <p>Uses past data to inform decisions. Example: self-driving cars learn from recent road observations to predict what other vehicles will do.</p>
+      </div>
+      <div class="memory-card">
+        <div class="mem-badge">Type 3</div>
+        <h3>Theory of Mind</h3>
+        <p>Understands emotions, beliefs, and intentions of others. This type is largely theoretical — not yet achieved in real AI systems.</p>
+      </div>
+      <div class="memory-card">
+        <div class="mem-badge">Type 4</div>
+        <h3>Self-Aware AI</h3>
+        <p>Has consciousness and self-understanding. A completely hypothetical category that remains a topic of philosophical debate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK LINKS -->
+<section class="section" id="explore">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Explore More</span>
+      <h2>Dive Deeper</h2>
+    </div>
+    <div class="explore-grid">
+      <a href="ml.html" class="explore-card">
+        <div class="exp-icon">📊</div>
+        <h3>ML Fundamentals</h3>
+        <p>Supervised, unsupervised, and reinforcement learning with clear examples.</p>
+        <span class="exp-link">Learn more →</span>
+      </a>
+      <a href="algorithms.html" class="explore-card">
+        <div class="exp-icon">⚙️</div>
+        <h3>Core Algorithms</h3>
+        <p>From linear regression to neural networks — how they work and when to use them.</p>
+        <span class="exp-link">Learn more →</span>
+      </a>
+      <a href="applications.html" class="explore-card">
+        <div class="exp-icon">🌐</div>
+        <h3>Real-World Applications</h3>
+        <p>AI in computer vision, NLP, robotics, healthcare, and generative AI.</p>
+        <span class="exp-link">Learn more →</span>
+      </a>
+      <a href="quiz.html" class="explore-card">
+        <div class="exp-icon">🎯</div>
+        <h3>Test Your Knowledge</h3>
+        <p>Interactive quiz and flashcards to reinforce what you've learned.</p>
+        <span class="exp-link">Take quiz →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+        <p>An informative web platform on Artificial Intelligence, Machine Learning, and Core Algorithms.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="ml.html">ML Fundamentals</a>
+        <a href="algorithms.html">Algorithms</a>
+        <a href="applications.html">Applications</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="glossary.html">Glossary</a>
+      </div>
+      <div class="footer-info">
+        <h4>Project Info</h4>
+        <p>Course: Web Programming Lab</p>
+        <p>Code: CSE061 3302</p>
+        <p>Section: 61-D · Summer 2026</p>
+        <p>Uttara University, CSE Dept.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ExploringAI — Uttara University · Section 61-D · Submitted to Jebun Nahar Juthy</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

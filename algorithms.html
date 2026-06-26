@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core Algorithms – ExploringAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="ml.html">ML Fundamentals</a>
+    <a href="algorithms.html" class="active">Algorithms</a>
+    <a href="applications.html">Applications</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"><span class="toggle-icon">◐</span></button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <span class="eyebrow">Core Algorithms</span>
+  <h1>How the Algorithms Work</h1>
+  <p>From linear regression to deep neural networks — the core methods behind modern machine learning, explained clearly.</p>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Click to Expand</span>
+      <h2>Algorithm Explorer</h2>
+      <p>Tap any algorithm to reveal how it works, when to use it, and what problems it solves.</p>
+    </div>
+
+    <div class="algo-list">
+
+      <!-- Linear Regression -->
+      <div class="algo-card open">
+        <div class="algo-header">
+          <div class="algo-icon">📈</div>
+          <div class="algo-title">
+            <h3>Linear Regression</h3>
+            <span>Supervised · Regression</span>
+          </div>
+          <span class="algo-chevron">▼</span>
+        </div>
+        <div class="algo-body">
+          <p>Linear regression models the relationship between a dependent variable and one or more independent variables by fitting a straight line (or hyperplane) through the data. The goal is to find the line that minimizes the sum of squared differences between predictions and actual values — called the "least squares" method.</p>
+          <p>The model is expressed as: <strong style="font-family:var(--font-mono);color:var(--accent)">ŷ = β₀ + β₁x₁ + β₂x₂ + ... + ε</strong>, where β values are learned coefficients and ε is error.</p>
+          <div class="use-case">
+            <span class="uc-tag">House price prediction</span>
+            <span class="uc-tag">Sales forecasting</span>
+            <span class="uc-tag">Risk assessment</span>
+            <span class="uc-tag">Trend analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logistic Regression -->
+      <div class="algo-card">
+        <div class="algo-header">
+          <div class="algo-icon">🔀</div>
+          <div class="algo-title">
+            <h3>Logistic Regression</h3>
+            <span>Supervised · Classification</span>
+          </div>
+          <span class="algo-chevron">▼</span>
+        </div>
+        <div class="algo-body">
+          <p>Despite its name, logistic regression is a classification algorithm. It uses the logistic (sigmoid) function to squash a linear combination of inputs into a value between 0 and 1, which is interpreted as a probability. If the probability exceeds 0.5, the input is classified as class 1; otherwise class 0.</p>
+          <p>The sigmoid function is: <strong style="font-family:var(--font-mono);color:var(--accent)">σ(z) = 1 / (1 + e⁻ᶻ)</strong>. It works best when the relationship between features and the target is approximately log-linear.</p>
+          <div class="use-case">
+            <span class="uc-tag">Spam detection</span>
+            <span class="uc-tag">Disease diagnosis</span>
+            <span class="uc-tag">Credit scoring</span>
+            <span class="uc-tag">Sentiment analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decision Trees -->
+      <div class="algo-card">
+        <div class="algo-header">
+          <div class="algo-icon">🌳</div>
+          <div class="algo-title">
+            <h3>Decision Trees</h3>
+            <span>Supervised · Classification & Regression</span>
+          </div>
+          <span class="algo-chevron">▼</span>
+        </div>
+        <div class="algo-body">
+          <p>Decision Trees partition the feature space by asking a series of yes/no questions. At each internal node, the tree splits on the feature and threshold that best separates the data (maximizing information gain or minimizing Gini impurity). The process continues recursively until a stopping criterion is met.</p>
+          <p>They are highly interpretable — you can trace exactly why a prediction was made by following the path from root to leaf. However, single trees are prone to overfitting on complex data.</p>
+          <div class="use-case">
+            <span class="uc-tag">Medical diagnosis</span>
+            <span class="uc-tag">Customer segmentation</span>
+            <span class="uc-tag">Fraud detection</span>
+            <span class="uc-tag">Feature selection</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Random Forests -->
+      <div class="algo-card">
+        <div class="algo-header">
+          <div class="algo-icon">🌲</div>
+          <div class="algo-title">
+            <h3>Random Forests</h3>
+            <span>Ensemble · Classification & Regression</span>
+          </div>
+          <span class="algo-chevron">▼</span>
+        </div>
+        <div class="algo-body">
+          <p>A Random Forest builds many decision trees during training, each on a random bootstrap sample of the data and a random subset of features. At prediction time, it aggregates all trees by majority vote (classification) or averaging (regression). This technique is called "bagging."</p>
+          <p>By averaging many uncorrelated trees, Random Forests dramatically reduce variance compared to a single tree, while maintaining low bias. They're robust, resistant to overfitting, and naturally handle missing data.</p>
+          <div class="use-case">
+            <span class="uc-tag">Bioinformatics</span>
+            <span class="uc-tag">Stock market prediction</span>
+            <span class="uc-tag">Image classification</span>
+            <span class="uc-tag">Remote sensing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- KNN -->
+      <div class="algo-card">
+        <div class="algo-header">
+          <div class="algo-icon">📍</div>
+          <div class="algo-title">
+            <h3>K-Nearest Neighbors (KNN)</h3>
+            <span>Supervised · Classification & Regression</span>
+          </div>
+          <span class="algo-chevron">▼</span>
+        </div>
+        <div class="algo-body">
+          <p>KNN is a lazy learning algorithm — it stores all training data and makes predictions only at query time. Given a new point, it finds the K most similar (nearest) training examples using a distance metric (usually Euclidean distance), then predicts by majority vote or averaging their labels.</p>
+          <p>Choosing K is critical: small K is noisy and overfits; large K is smooth but may underfit. KNN is intuitive and requires no training phase, but can be slow at inference time for large datasets.</p>
+          <div class="use-case">
+            <span class="uc-tag">Recommendation systems</span>
+            <span class="uc-tag">Anomaly detection</span>
+            <span class="uc-tag">Image recognition</span>
+            <span class="uc-tag">Medical diagnosis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- K-Means -->
+      <div class="algo-card">
+        <div class="algo-header">
+          <div class="algo-icon">⭕</div>
+          <div class="algo-title">
+            <h3>K-Means Clustering</h3>
+            <span>Unsupervised · Clustering</span>
+          </div>
+          <span class="algo-chevron">▼</span>
+        </div>
+        <div class="algo-body">
+          <p>K-Means partitions N data points into K clusters. It initializes K centroids, assigns each point to its nearest centroid, then recalculates centroids as the mean of all assigned points. This process repeats until centroids no longer move significantly.</p>
+          <p>The algorithm minimizes within-cluster sum of squares (inertia). The main challenge is choosing K — the "elbow method" plots inertia vs K values and looks for the point of diminishing returns.</p>
+          <div class="use-case">
+            <span class="uc-tag">Customer segmentation</span>
+            <span class="uc-tag">Document clustering</span>
+            <span class="uc-tag">Image compression</span>
+            <span class="uc-tag">Data summarization</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVM -->
+      <div class="algo-card">
+        <div class="algo-header">
+          <div class="algo-icon">✂️</div>
+          <div class="algo-title">
+            <h3>Support Vector Machines (SVM)</h3>
+            <span>Supervised · Classification & Regression</span>
+          </div>
+          <span class="algo-chevron">▼</span>
+        </div>
+        <div class="algo-body">
+          <p>SVMs find the optimal hyperplane that separates two classes with the maximum margin. The data points closest to the hyperplane are called "support vectors" — they define the margin boundary. A wider margin generally means better generalization to unseen data.</p>
+          <p>The "kernel trick" allows SVMs to classify non-linearly separable data by implicitly mapping it into a higher-dimensional space where a linear separator exists. Common kernels include RBF (Gaussian) and polynomial kernels.</p>
+          <div class="use-case">
+            <span class="uc-tag">Text classification</span>
+            <span class="uc-tag">Bioinformatics</span>
+            <span class="uc-tag">Face detection</span>
+            <span class="uc-tag">Handwriting recognition</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Neural Networks -->
+      <div class="algo-card">
+        <div class="algo-header">
+          <div class="algo-icon">🧠</div>
+          <div class="algo-title">
+            <h3>Neural Networks & Deep Learning</h3>
+            <span>Supervised · Universal Function Approximators</span>
+          </div>
+          <span class="algo-chevron">▼</span>
+        </div>
+        <div class="algo-body">
+          <p>Inspired by biological neurons, artificial neural networks are composed of layers of interconnected nodes. Each node computes a weighted sum of its inputs, applies a non-linear activation function (ReLU, sigmoid, tanh), and passes the result to the next layer.</p>
+          <p>Deep Learning uses networks with many hidden layers. Through backpropagation and gradient descent, the network learns optimal weights by propagating prediction error backwards through each layer. Deep networks can learn hierarchical representations — from edges, to shapes, to objects in image recognition.</p>
+          <p><strong style="color:var(--text-primary)">Types:</strong> CNNs (images), RNNs/LSTMs (sequences), Transformers (language), GANs (generation).</p>
+          <div class="use-case">
+            <span class="uc-tag">Image classification</span>
+            <span class="uc-tag">Language translation</span>
+            <span class="uc-tag">Speech recognition</span>
+            <span class="uc-tag">Generative AI</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Visualization -->
+    <div class="viz-wrapper">
+      <div class="viz-title">Interactive: Linear Regression Visualizer</div>
+      <p class="viz-desc">Each dot is a data point. The dashed line is the best-fit regression line computed via least squares. Hover over points to highlight them.</p>
+      <canvas id="vizCanvas"></canvas>
+      <div class="viz-controls">
+        <button class="btn btn-ghost" id="addPointBtn">+ Add Random Point</button>
+        <button class="btn btn-ghost" id="resetVizBtn">↺ Reset Data</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+        <p>An informative web platform on Artificial Intelligence, Machine Learning, and Core Algorithms.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="ml.html">ML Fundamentals</a>
+        <a href="algorithms.html">Algorithms</a>
+        <a href="applications.html">Applications</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="glossary.html">Glossary</a>
+      </div>
+      <div class="footer-info">
+        <h4>Project Info</h4>
+        <p>Course: Web Programming Lab</p>
+        <p>Code: CSE061 3302</p>
+        <p>Section: 61-D · Summer 2026</p>
+        <p>Uttara University, CSE Dept.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ExploringAI — Uttara University · Section 61-D · Submitted to Jebun Nahar Juthy</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

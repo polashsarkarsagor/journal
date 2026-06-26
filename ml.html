@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML Fundamentals – ExploringAI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="ml.html" class="active">ML Fundamentals</a>
+    <a href="algorithms.html">Algorithms</a>
+    <a href="applications.html">Applications</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+  <div class="nav-right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode"><span class="toggle-icon">◐</span></button>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <span class="eyebrow">Machine Learning</span>
+  <h1>ML Fundamentals</h1>
+  <p>Understand the three learning paradigms and key terminology that underpin every modern AI system.</p>
+</header>
+
+<!-- THREE PARADIGMS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Learning Paradigms</span>
+      <h2>How Machines Learn</h2>
+      <p>Machine Learning is broadly divided into three paradigms, each suited to different types of problems and data.</p>
+    </div>
+    <div class="paradigm-grid">
+      <div class="paradigm-card">
+        <div class="paradigm-num">01</div>
+        <h3>Supervised Learning</h3>
+        <p>The model learns from labeled training data — each input is paired with a correct output. The goal is to learn a mapping function that predicts outputs for unseen inputs.</p>
+        <p>Think of it like learning with a teacher who tells you if each answer is right or wrong.</p>
+        <div class="example-box">
+          <strong>Example</strong>
+          Email labeled "spam" or "not spam" trains a spam classifier. Given new emails, it predicts the label.
+        </div>
+        <div class="use-case" style="margin-top:16px">
+          <span class="uc-tag">Classification</span>
+          <span class="uc-tag">Regression</span>
+          <span class="uc-tag">Prediction</span>
+        </div>
+      </div>
+      <div class="paradigm-card">
+        <div class="paradigm-num">02</div>
+        <h3>Unsupervised Learning</h3>
+        <p>The model works with unlabeled data, discovering hidden patterns, structures, and groupings on its own. There's no explicit "correct answer" to guide learning.</p>
+        <p>Think of it like exploring a new city without a map — you discover patterns from experience.</p>
+        <div class="example-box">
+          <strong>Example</strong>
+          A retailer groups customers by purchasing behavior without predefined categories, revealing natural segments.
+        </div>
+        <div class="use-case" style="margin-top:16px">
+          <span class="uc-tag">Clustering</span>
+          <span class="uc-tag">Dimensionality Reduction</span>
+          <span class="uc-tag">Anomaly Detection</span>
+        </div>
+      </div>
+      <div class="paradigm-card">
+        <div class="paradigm-num">03</div>
+        <h3>Reinforcement Learning</h3>
+        <p>An agent learns to make decisions by interacting with an environment. It receives rewards for good actions and penalties for bad ones, learning a policy to maximize long-term reward.</p>
+        <p>Think of it like training a dog — reward good behavior, discourage bad behavior over time.</p>
+        <div class="example-box">
+          <strong>Example</strong>
+          AlphaGo learned to play Go by playing millions of games against itself, improving through win/loss rewards.
+        </div>
+        <div class="use-case" style="margin-top:16px">
+          <span class="uc-tag">Game Playing</span>
+          <span class="uc-tag">Robotics</span>
+          <span class="uc-tag">Autonomous Systems</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY TERMINOLOGY -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Vocabulary</span>
+      <h2>Key Terminology</h2>
+      <p>The language of machine learning — terms you'll encounter in every algorithm and paper.</p>
+    </div>
+    <div class="term-grid">
+      <div class="term-card">
+        <h4>Training Data</h4>
+        <p>The dataset used to fit the model's parameters. The model learns patterns directly from this data, so its quality and size critically affect performance.</p>
+      </div>
+      <div class="term-card">
+        <h4>Features</h4>
+        <p>Individual measurable properties of the data used as inputs. For example, in predicting house prices, features might be size, location, and number of bedrooms.</p>
+      </div>
+      <div class="term-card">
+        <h4>Labels</h4>
+        <p>The correct output values in supervised learning — what the model is trying to predict. Labels are provided in training data but unknown at prediction time.</p>
+      </div>
+      <div class="term-card">
+        <h4>Overfitting</h4>
+        <p>When a model learns the training data too well, including noise and random fluctuations. It performs excellently on training data but poorly on unseen test data.</p>
+      </div>
+      <div class="term-card">
+        <h4>Underfitting</h4>
+        <p>When a model is too simple to capture the underlying pattern. It performs poorly on both training and test data — often caused by too few features or low model complexity.</p>
+      </div>
+      <div class="term-card">
+        <h4>Bias–Variance Tradeoff</h4>
+        <p>Bias = error from overly simple assumptions (underfitting). Variance = error from sensitivity to small fluctuations (overfitting). Good models balance both.</p>
+      </div>
+      <div class="term-card">
+        <h4>Epoch</h4>
+        <p>One complete pass through the entire training dataset. Models are typically trained for many epochs, gradually improving with each pass.</p>
+      </div>
+      <div class="term-card">
+        <h4>Loss Function</h4>
+        <p>A mathematical measure of how wrong the model's predictions are. Training aims to minimize the loss. Common examples: Mean Squared Error, Cross-Entropy.</p>
+      </div>
+      <div class="term-card">
+        <h4>Gradient Descent</h4>
+        <p>An optimization algorithm that adjusts model parameters in the direction that reduces the loss function most steeply, like rolling downhill to find the lowest point.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Comparison</span>
+      <h2>Paradigms at a Glance</h2>
+    </div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-family:var(--font-body);font-size:0.9rem;">
+        <thead>
+          <tr style="background:var(--bg-card);border-bottom:2px solid var(--border);">
+            <th style="padding:14px 20px;text-align:left;font-family:var(--font-display);">Aspect</th>
+            <th style="padding:14px 20px;text-align:left;font-family:var(--font-display);color:var(--accent);">Supervised</th>
+            <th style="padding:14px 20px;text-align:left;font-family:var(--font-display);color:var(--accent-2);">Unsupervised</th>
+            <th style="padding:14px 20px;text-align:left;font-family:var(--font-display);color:var(--green);">Reinforcement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:14px 20px;color:var(--text-muted);font-family:var(--font-mono);font-size:0.8rem;">Data</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">Labeled</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">Unlabeled</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">Environment feedback</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);">
+            <td style="padding:14px 20px;color:var(--text-muted);font-family:var(--font-mono);font-size:0.8rem;">Goal</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">Predict labels</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">Discover structure</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">Maximize reward</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:14px 20px;color:var(--text-muted);font-family:var(--font-mono);font-size:0.8rem;">Algorithms</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">Regression, SVM, Trees</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">K-Means, PCA, DBSCAN</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">Q-Learning, PPO, A3C</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);background:var(--bg-alt);">
+            <td style="padding:14px 20px;color:var(--text-muted);font-family:var(--font-mono);font-size:0.8rem;">Use Cases</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">Spam filter, Price prediction</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">Customer segmentation</td>
+            <td style="padding:14px 20px;color:var(--text-secondary);">Game AI, Robot control</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Exploring<span>AI</span></a>
+        <p>An informative web platform on Artificial Intelligence, Machine Learning, and Core Algorithms.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="ml.html">ML Fundamentals</a>
+        <a href="algorithms.html">Algorithms</a>
+        <a href="applications.html">Applications</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="glossary.html">Glossary</a>
+      </div>
+      <div class="footer-info">
+        <h4>Project Info</h4>
+        <p>Course: Web Programming Lab</p>
+        <p>Code: CSE061 3302</p>
+        <p>Section: 61-D · Summer 2026</p>
+        <p>Uttara University, CSE Dept.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ExploringAI — Uttara University · Section 61-D · Submitted to Jebun Nahar Juthy</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
